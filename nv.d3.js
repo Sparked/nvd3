@@ -930,7 +930,7 @@ nv.utils.getColor = function(color) {
 
 // Default color chooser uses the index of an object as before.
 nv.utils.defaultColor = function() {
-    var colors = d3.scale.category20().range();
+    var colors = ["#2983A6","#6BB0BF","#F27127", "#F25F29", "#F2F2F2"];
     return function(d, i) { return d.color || colors[i % colors.length] };
 }
 
@@ -5615,9 +5615,9 @@ nv.models.lineChart = function() {
 
       if (showXAxis) {
         xAxis
-          .scale(x)
-          .ticks( availableWidth / 100 )
-          .tickSize(-availableHeight, 0);
+          .scale(x);
+          // .ticks( availableWidth / 100 )
+          // .tickSize(-availableHeight, 0);
 
         g.select('.nv-x.nv-axis')
             .attr('transform', 'translate(0,' + y.range()[0] + ')');

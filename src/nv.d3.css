@@ -814,3 +814,12 @@ Interactive Layer
 .nvd3 line.nv-guideline {
   stroke: #ccc;
 }
+/****
+Custom stuff
+*/
+.nv-y .nv-axis line {
+  stroke-dasharray:7,10
+}
+.nv-y .nv-axis .domain {
+  stroke: transparent;
+}

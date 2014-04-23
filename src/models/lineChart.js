@@ -209,9 +209,9 @@ nv.models.lineChart = function() {
 
       if (showXAxis) {
         xAxis
-          .scale(x)
-          .ticks( availableWidth / 100 )
-          .tickSize(-availableHeight, 0);
+          .scale(x);
+          // .ticks( availableWidth / 100 )
+          // .tickSize(-availableHeight, 0);
 
         g.select('.nv-x.nv-axis')
             .attr('transform', 'translate(0,' + y.range()[0] + ')');
